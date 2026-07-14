@@ -270,6 +270,7 @@ section{ padding-block: clamp(3rem, 7vw, 5.5rem); }
 .process-item:last-child{ border-bottom: 1px solid var(--line); }
 .process-item::before{
   content: counter(step, decimal-leading-zero);
+  grid-column: 1; grid-row: 1;
   font-family: var(--font-mono); font-size: 1.6rem; color: var(--brass);
 }
 .process-item h3{ font-size: 1.05rem; margin-bottom: 0.3rem; }
