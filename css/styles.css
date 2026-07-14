@@ -242,6 +242,8 @@ section{ padding-block: clamp(3rem, 7vw, 5.5rem); }
 }
 .cred-card .disk{ width: 46px; height: 46px; flex-shrink: 0; }
 .cred-card .badge-img{ width: 52px; height: auto; object-fit: contain; }
+.cred-card-badge{ flex-direction: column; align-items: flex-start; }
+.badge-img-lg{ width: 100%; max-width: 150px; height: auto; margin-bottom: 1rem; }
 .cred-card h3{ font-size: 0.95rem; margin-bottom: 0.3rem; }
 .cred-card p{ font-size: 0.85rem; color: #A9B4CE; margin: 0; font-family: var(--font-mono); }
 
