@@ -2,20 +2,20 @@
    Ascension Land Surveying — Design Tokens
    ========================================================================== */
 :root{
-  --ink: #161A1D;
-  --ink-soft: #232A2F;
-  --slate: #3E4A52;
-  --paper: #EDE8DC;
-  --paper-dim: #E2DBC9;
-  --line: #4D5A62;
-  --orange: #E2572B;
-  --orange-dim: #B8441F;
-  --brass: #B8935A;
-  --brass-bright: #D4B27C;
-  --ok-white: #F5F2E9;
+  --ink: #0A1B30;
+  --ink-soft: #12294A;
+  --slate: #2E4E74;
+  --paper: #F9F7E9;
+  --paper-dim: #EFE8D2;
+  --line: #24405F;
+  --orange: #D9A62E;
+  --orange-dim: #A97F1E;
+  --brass: #0A4C86;
+  --brass-bright: #F1CC60;
+  --ok-white: #F5F1E4;
 
-  --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --font-body: "Source Serif 4", Georgia, serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "IBM Plex Mono", "Courier New", monospace;
 
   --step-8: clamp(2.6rem, 2rem + 2.6vw, 4.6rem);
@@ -61,13 +61,31 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    ========================================================================== */
 .topo-field{
   position: absolute; inset: 0;
-  background-image: repeating-radial-gradient(circle at 18% 30%, transparent 0, transparent 34px, rgba(184,147,90,0.08) 35px, transparent 36px, transparent 70px);
+  background-image: repeating-radial-gradient(circle at 18% 30%, transparent 0, transparent 34px, rgba(10,76,134,0.10) 35px, transparent 36px, transparent 70px);
   pointer-events: none;
 }
 .topo-field.dense{
   background-image:
-    repeating-radial-gradient(circle at 18% 30%, transparent 0, transparent 22px, rgba(184,147,90,0.07) 23px, transparent 24px, transparent 46px),
-    repeating-radial-gradient(circle at 82% 70%, transparent 0, transparent 30px, rgba(226,87,43,0.06) 31px, transparent 32px, transparent 60px);
+    repeating-radial-gradient(circle at 18% 30%, transparent 0, transparent 22px, rgba(10,76,134,0.08) 23px, transparent 24px, transparent 46px),
+    repeating-radial-gradient(circle at 82% 70%, transparent 0, transparent 30px, rgba(217,166,46,0.08) 31px, transparent 32px, transparent 60px);
+}
+
+.compass-mark{
+  position: absolute;
+  top: 50%; right: -4%;
+  width: 440px; height: 440px;
+  transform: translateY(-50%);
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+@media (max-width: 900px){ .compass-mark{ width: 260px; height: 260px; right: -12%; opacity: 0.05; } }
+@media (prefers-reduced-motion: no-preference){
+  .compass-mark{ animation: compass-drift 90s linear infinite; }
+}
+@keyframes compass-drift{
+  from{ transform: translateY(-50%) rotate(0deg); }
+  to{ transform: translateY(-50%) rotate(360deg); }
 }
 
 /* ==========================================================================
@@ -112,11 +130,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .nav-cta{
   font-family: var(--font-mono) !important;
-  border: 1px solid var(--brass);
+  border: 1px solid var(--brass-bright);
   padding: 0.5rem 0.9rem !important;
   color: var(--brass-bright) !important;
 }
-.nav-cta:hover{ background: var(--brass); color: var(--ink) !important; }
+.nav-cta:hover{ background: var(--brass-bright); color: var(--ink) !important; }
 .nav-toggle{ display: none; }
 
 @media (max-width: 860px){
@@ -161,7 +179,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--brass-bright); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem;
 }
-.eyebrow-mono::before{ content: ""; width: 22px; height: 1px; background: var(--brass); display: inline-block; }
+.eyebrow-mono::before{ content: ""; width: 22px; height: 1px; background: var(--brass-bright); display: inline-block; }
 
 .hero h1{
   font-size: var(--step-8);
@@ -182,7 +200,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .btn-primary{ background: var(--orange); color: var(--ink); font-weight: 600; }
 .btn-primary:hover{ background: #F0693C; transform: translateY(-1px); }
 .btn-ghost{ border: 1px solid var(--line); color: var(--ok-white); }
-.btn-ghost:hover{ border-color: var(--brass); color: var(--brass-bright); }
+.btn-ghost:hover{ border-color: var(--brass-bright); color: var(--brass-bright); }
 
 /* Coordinate readout card — literal survey data, not decorative stat block */
 .readout{
@@ -193,7 +211,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .readout-head{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.1rem; padding-bottom: 0.9rem; border-bottom: 1px dashed var(--line); }
 .readout-head span{ font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #9A9384; }
-.readout-dot{ width: 7px; height: 7px; border-radius: 50%; background: var(--orange); display: inline-block; margin-right: 0.4rem; box-shadow: 0 0 0 3px rgba(226,87,43,0.18); }
+.readout-dot{ width: 7px; height: 7px; border-radius: 50%; background: var(--orange); display: inline-block; margin-right: 0.4rem; box-shadow: 0 0 0 3px rgba(217,166,46,0.22); }
 .readout-row{ display: flex; justify-content: space-between; padding-block: 0.5rem; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
 .readout-row:last-child{ border-bottom: none; }
 .readout-row .k{ color: #9A9384; }
