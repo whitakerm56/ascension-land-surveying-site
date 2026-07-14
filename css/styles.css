@@ -120,7 +120,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #C9C4B6;
+  color: #C7CEE0;
   position: relative;
   padding-block: 0.3rem;
 }
@@ -210,11 +210,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-family: var(--font-mono);
 }
 .readout-head{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.1rem; padding-bottom: 0.9rem; border-bottom: 1px dashed var(--line); }
-.readout-head span{ font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #9A9384; }
+.readout-head span{ font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #7E8CAD; }
 .readout-dot{ width: 7px; height: 7px; border-radius: 50%; background: var(--orange); display: inline-block; margin-right: 0.4rem; box-shadow: 0 0 0 3px rgba(217,166,46,0.22); }
 .readout-row{ display: flex; justify-content: space-between; padding-block: 0.5rem; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
 .readout-row:last-child{ border-bottom: none; }
-.readout-row .k{ color: #9A9384; }
+.readout-row .k{ color: #7E8CAD; }
 .readout-row .v{ color: var(--ok-white); }
 
 /* ==========================================================================
@@ -242,7 +242,7 @@ section{ padding-block: clamp(3rem, 7vw, 5.5rem); }
 }
 .cred-card .disk{ width: 46px; height: 46px; flex-shrink: 0; }
 .cred-card h3{ font-size: 0.95rem; margin-bottom: 0.3rem; }
-.cred-card p{ font-size: 0.85rem; color: #B5AF9F; margin: 0; font-family: var(--font-mono); }
+.cred-card p{ font-size: 0.85rem; color: #A9B4CE; margin: 0; font-family: var(--font-mono); }
 
 /* ==========================================================================
    Services
@@ -254,8 +254,8 @@ section{ padding-block: clamp(3rem, 7vw, 5.5rem); }
 .svc-num{ font-family: var(--font-mono); font-size: 0.78rem; color: var(--brass-bright); letter-spacing: 0.08em; }
 .section-paper .svc-num{ color: var(--orange-dim); }
 .svc-card h3{ font-size: var(--step-4); margin-block: 0.6rem 0.6rem; }
-.svc-card p{ color: #C9C4B6; font-size: 0.98rem; }
-.section-paper .svc-card p{ color: #3E4A52; }
+.svc-card p{ color: #C7CEE0; font-size: 0.98rem; }
+.section-paper .svc-card p{ color: #2E4E74; }
 .svc-card a{ font-family: var(--font-mono); font-size: 0.78rem; text-decoration: none; color: var(--orange); text-transform: uppercase; letter-spacing: 0.05em; }
 
 /* ==========================================================================
@@ -273,7 +273,7 @@ section{ padding-block: clamp(3rem, 7vw, 5.5rem); }
   font-family: var(--font-mono); font-size: 1.6rem; color: var(--brass);
 }
 .process-item h3{ font-size: 1.05rem; margin-bottom: 0.3rem; }
-.process-item p{ margin: 0; color: #C9C4B6; font-size: 0.95rem; max-width: 60ch; }
+.process-item p{ margin: 0; color: #C7CEE0; font-size: 0.95rem; max-width: 60ch; }
 
 /* ==========================================================================
    Service areas (state-level only — deliberately not per-city clones)
@@ -285,7 +285,7 @@ section{ padding-block: clamp(3rem, 7vw, 5.5rem); }
 @media (max-width: 560px){ .area-grid-6{ grid-template-columns: 1fr; } }
 .area-card{ background: var(--ink-soft); padding: 2.2rem; }
 .area-card h3{ font-family: var(--font-mono); font-size: 1rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--brass-bright); margin-bottom: 1rem; }
-.area-card ul{ margin: 1rem 0 0; padding-left: 1.1rem; color: #C9C4B6; font-size: 0.92rem; }
+.area-card ul{ margin: 1rem 0 0; padding-left: 1.1rem; color: #C7CEE0; font-size: 0.92rem; }
 .area-card li{ margin-bottom: 0.4rem; }
 
 /* ==========================================================================
@@ -295,8 +295,8 @@ section{ padding-block: clamp(3rem, 7vw, 5.5rem); }
 @media (max-width: 900px){ .review-grid{ grid-template-columns: 1fr; } }
 .review-card{ border: 1px solid var(--paper-dim); border-radius: var(--radius); padding: 1.5rem; background: var(--ok-white); }
 .review-stars{ font-family: var(--font-mono); color: var(--orange-dim); font-size: 0.85rem; margin-bottom: 0.8rem; letter-spacing: 0.15em; }
-.review-card p{ font-size: 0.95rem; color: #232A2F; }
-.review-attr{ font-family: var(--font-mono); font-size: 0.78rem; color: #6B6455; margin-top: 1rem; }
+.review-card p{ font-size: 0.95rem; color: #0A1B30; }
+.review-attr{ font-family: var(--font-mono); font-size: 0.78rem; color: #5A6B8C; margin-top: 1rem; }
 
 /* ==========================================================================
    CTA band
@@ -318,7 +318,7 @@ section{ padding-block: clamp(3rem, 7vw, 5.5rem); }
 .footer-grid{ display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2.5rem; }
 @media (max-width: 760px){ .footer-grid{ grid-template-columns: 1fr 1fr; } }
 .footer-col h4{ font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--brass-bright); margin-bottom: 0.9rem; }
-.footer-col a{ display: block; text-decoration: none; color: #C9C4B6; font-size: 0.88rem; margin-bottom: 0.55rem; }
+.footer-col a{ display: block; text-decoration: none; color: #C7CEE0; font-size: 0.88rem; margin-bottom: 0.55rem; }
 .footer-col a:hover{ color: var(--ok-white); }
 .footer-bottom{ display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; font-family: var(--font-mono); font-size: 0.75rem; color: #7A7566; border-top: 1px solid var(--line); padding-top: 1.4rem; }
 
@@ -327,7 +327,7 @@ section{ padding-block: clamp(3rem, 7vw, 5.5rem); }
    ========================================================================== */
 .page-hero{ padding-block: clamp(2.8rem, 6vw, 4.5rem); border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
 .page-hero h1{ font-size: var(--step-6); max-width: 22ch; }
-.page-hero .lede{ max-width: 60ch; color: #C9C4B6; margin-top: 0.8rem; }
+.page-hero .lede{ max-width: 60ch; color: #C7CEE0; margin-top: 0.8rem; }
 
 /* Contact form */
 .contact-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
@@ -340,9 +340,9 @@ section{ padding-block: clamp(3rem, 7vw, 5.5rem); }
 }
 .field textarea{ resize: vertical; min-height: 110px; }
 .field input:focus, .field textarea:focus, .field select:focus{ border-color: var(--orange); }
-.form-note{ font-family: var(--font-mono); font-size: 0.78rem; color: #9A9384; margin-top: 1rem; }
+.form-note{ font-family: var(--font-mono); font-size: 0.78rem; color: #7E8CAD; margin-top: 1rem; }
 
 .contact-side{ font-family: var(--font-mono); font-size: 0.9rem; }
 .contact-side .disk{ width: 60px; height: 60px; margin-bottom: 1.2rem; }
-.contact-side dt{ color: #9A9384; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1.2rem; }
+.contact-side dt{ color: #7E8CAD; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1.2rem; }
 .contact-side dd{ margin: 0.3rem 0 0; color: var(--ok-white); font-size: 1rem; }
